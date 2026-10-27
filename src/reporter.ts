@@ -40,7 +40,7 @@ export function printAuditReport(report: AuditReport): void {
       console.log(`    ${pc.dim('Rule info:')} ${pc.underline(pc.cyan(v.helpUrl))}`);
 
       v.nodes.slice(0, 3).forEach((node) => {
-        console.log(`    ${pc.red('↳ Element:')} ${pc.yellow(node.target.join(' ' || 'unknown'))}`);
+        console.log(`    ${pc.red('↳ Element:')} ${pc.yellow(node.target.join(' ') || 'unknown')}`);
         console.log(`      ${pc.dim('HTML:')} ${pc.dim(node.html.trim().slice(0, 90))}`);
       });
 
